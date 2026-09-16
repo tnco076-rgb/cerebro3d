@@ -1,0 +1,175 @@
+```html
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Atlas Cerebral 3D</title>
+
+    <!-- Three.js -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/three.js/r128/three.min.js"></script>
+
+    <!-- GLTFLoader -->
+    <script src="https://cdn.jsdelivr.net/npm/three@0.128.0/examples/js/loaders/GLTFLoader.js"></script>
+
+    <!-- OrbitControls -->
+    <script src="https://cdn.jsdelivr.net/npm/three@0.128.0/examples/js/controls/OrbitControls.js"></script>
+
+    <style>
+
+        * {
+            box-sizing: border-box;
+        }
+
+        body {
+            margin: 0;
+            font-family: Arial, Helvetica, sans-serif;
+            background: #eef2f7;
+            color: #222;
+            overflow: hidden;
+        }
+
+        /* ENCABEZADO */
+
+        header {
+            height: 75px;
+            background: #ffffff;
+            display: flex;
+            align-items: center;
+            padding: 0 25px;
+            border-bottom: 1px solid #d8dee8;
+            position: relative;
+            z-index: 10;
+        }
+
+        header h1 {
+            margin: 0;
+            font-size: 25px;
+            color: #253858;
+        }
+
+        header span {
+            margin-left: 15px;
+            color: #777;
+            font-size: 14px;
+        }
+
+        /* CONTENEDOR PRINCIPAL */
+
+        #app {
+            height: calc(100vh - 75px);
+            display: flex;
+        }
+
+        /* PANEL IZQUIERDO */
+
+        #menu {
+            width: 270px;
+            background: #ffffff;
+            border-right: 1px solid #d8dee8;
+            padding: 20px;
+            overflow-y: auto;
+            z-index: 5;
+        }
+
+        #menu h2 {
+            margin-top: 0;
+            font-size: 18px;
+            color: #253858;
+        }
+
+        .lobe-button {
+            width: 100%;
+            padding: 13px;
+            margin-bottom: 10px;
+            border: 1px solid #d4dae4;
+            background: #f7f9fc;
+            border-radius: 8px;
+            cursor: pointer;
+            text-align: left;
+            font-size: 15px;
+            transition: 0.2s;
+        }
+
+        .lobe-button:hover {
+            background: #e9eef6;
+            transform: translateX(3px);
+        }
+
+        .lobe-button.active {
+            background: #253858;
+            color: white;
+        }
+
+        #resetButton {
+            width: 100%;
+            padding: 12px;
+            margin-top: 10px;
+            border: none;
+            border-radius: 8px;
+            background: #596780;
+            color: white;
+            cursor: pointer;
+        }
+
+        #resetButton:hover {
+            background: #3f4c63;
+        }
+
+        /* ÁREA 3D */
+
+        #viewer {
+            flex: 1;
+            position: relative;
+            background: radial-gradient(circle, #ffffff 0%, #e7ecf3 100%);
+        }
+
+        #canvas-container {
+            position: absolute;
+            inset: 0;
+        }
+
+        /* PANEL DE INFORMACIÓN */
+
+        #info {
+            width: 330px;
+            background: #ffffff;
+            border-left: 1px solid #d8dee8;
+            padding: 25px;
+            overflow-y: auto;
+        }
+
+        #info h2 {
+            margin-top: 0;
+            color: #253858;
+        }
+
+        #info h3 {
+            color: #596780;
+            margin-top: 25px;
+            margin-bottom: 8px;
+        }
+
+        #info p {
+            line-height: 1.55;
+            color: #444;
+            font-size: 14px;
+        }
+
+        /* CONTROLES */
+
+        #controls {
+            position: absolute;
+            top: 15px;
+            left: 15px;
+            background: rgba(255,255,255,0.94);
+            padding: 12px;
+            border-radius: 10px;
+            box-shadow: 0 3px 15px rgba(0,0,0,0.12);
+            z-index: 4;
+        }
+
+        #controls button {
+            border: 1px
+```
